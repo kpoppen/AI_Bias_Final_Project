@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+  <title>Index</title>
+</head>
+<body style="background-color:beige;"></body>
+
+  <style>
+    .btn-group {
+      background-color: salmon;
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 20%;
+      position: absolute;
+      bottom: 10%;
+      right: 20%;
+      left: 20%;
+    }
+    .hiddenParagraph {
+      display: none;
+      color: black;
+    }
+
+    .middlebutton {
+      background-color: salmon;
+      color: black;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 20%;
+      border-color: darkgray;
+      position: absolute;
+      bottom: 30%;
+      right: 5%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style = "text-align: center; background-color: salmon;">Question 5</h1>
+  <p style="text-align: center;border:2px solid darksalmon; font-size: 30px">Click the correct answer! </p>
+  <p style="text-align: center; font-size: 25px">Q: To teach AI models/algorithms how to make proper decisions, labeled data known as training data is used. Which of these examples mitigate AI bias through the use of training data? </p>
+  
+  <div class="btn-group">
+    <button onclick="revealParagraph('paragraph1')">For predicting traffic on a virtual map platform, the training data is limited to cities and highly populated areas. </button>
+    <p id="paragraph1" class="hiddenParagraph">Incorrect. By only including training data on cities and highly populated areas, this training data introduces bias (such as socioeconomic bias) into the AI model. </p>
+    
+    <button onclick="revealParagraph('paragraph2')">For a customer service chatbot, the training data is simple yes or no questions and all questions are in English. </button>
+    <p id="paragraph2" class="hiddenParagraph">Incorrect. By only including simple questions in English, this training data is introducing bias into the customer service chatbot. </p>
+
+    <button onclick="revealParagraph('paragraph3')">For a facial recognition system, the training data includes a diverse group of faces that show various races, genders, ages, etc. </button>
+    <p id="paragraph3" class="hiddenParagraph">Correct! By including a variety of faces in the training data, this algorithm ensures the AI works unbiased for all real-life faces it may encounter.</p>
+  </div>
+
+  <form action="question6.html">
+    <button type="submit" class="middlebutton">Next Question</button>
+  </form>
+
+  <script>
+    function revealParagraph(paragraphId) {
+      var paragraph = document.getElementById(paragraphId);
+      paragraph.style.display = "block";
+    }
+  </script>
+
+
+</body>
+
+</html>

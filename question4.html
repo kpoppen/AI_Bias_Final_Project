@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+  <title>Index</title>
+</head>
+<body style="background-color:beige;"></body>
+
+  <style>
+    .btn-group {
+      background-color: salmon;
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 20%;
+      position: absolute;
+      bottom: 10%;
+      right: 20%;
+      left: 20%;
+    }
+    .hiddenParagraph {
+      display: none;
+      color: black;
+    }
+
+    .middlebutton {
+      background-color: salmon;
+      color: black;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 20%;
+      border-color: darkgray;
+      position: absolute;
+      bottom: 30%;
+      right: 5%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style = "text-align: center; background-color: salmon;">Question 4</h1>
+  <p style="text-align: center;border:2px solid darksalmon; font-size: 30px">Click the correct answer! </p>
+  <p style="text-align: center; font-size: 25px">Q: Which of these answers is an unintended consequence of AI? </p>
+  
+  <div class="btn-group">
+    <button onclick="revealParagraph('paragraph1')">Racial & gender bias</button>
+    <p id="paragraph1" class="hiddenParagraph">Correct. Because AI algorithms are created by humans, they can have “built-in” biases that were inadvertently introduced by human bias. </p>
+    
+    <button onclick="revealParagraph('paragraph2')">Technological advancements</button>
+    <p id="paragraph2" class="hiddenParagraph">Incorrect. AI applications provide a hopeful future for the technology industry.</p>
+
+    <button onclick="revealParagraph('paragraph3')">Efficiency</button>
+    <p id="paragraph3" class="hiddenParagraph">Incorrect. AI applications can deal with significantly more data much faster than humans. </p>
+  </div>
+
+  <form action="question5.html">
+    <button type="submit" class="middlebutton">Next Question</button>
+  </form>
+
+  <script>
+    function revealParagraph(paragraphId) {
+      var paragraph = document.getElementById(paragraphId);
+      paragraph.style.display = "block";
+    }
+  </script>
+
+
+</body>
+
+</html>

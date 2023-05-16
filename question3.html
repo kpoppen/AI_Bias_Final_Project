@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+  <title>Index</title>
+</head>
+<body style="background-color:beige;"></body>
+
+  <style>
+    .btn-group {
+      background-color: salmon;
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 20%;
+      position: absolute;
+      bottom: 10%;
+      right: 20%;
+      left: 20%;
+    }
+    .hiddenParagraph {
+      display: none;
+      color: black;
+    }
+
+    .middlebutton {
+      background-color: salmon;
+      color: black;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 20%;
+      border-color: darkgray;
+      position: absolute;
+      bottom: 30%;
+      right: 5%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style = "text-align: center; background-color: salmon;">Question 3</h1>
+  <p style="text-align: center;border:2px solid darksalmon; font-size: 30px">Click the correct answer! </p>
+  <p style="text-align: center; font-size: 25px">Q: On a set of six questions designed to measure awareness of specific uses of AI in daily life, Americans were asked to classify the following as AI or not AI: wearable fitness trackers, custom product recommendations, customer service chatbots, facial recognition security cameras, music playlist recommendations, email services categorizing messages as spam. What percentage of Americans correctly identified all forms of AI? </p>
+  
+  <div class="btn-group">
+    <button onclick="revealParagraph('paragraph1')">15%</button>
+    <p id="paragraph1" class="hiddenParagraph">Incorrect. Not quite…</p>
+    
+    <button onclick="revealParagraph('paragraph2')">30%</button>
+    <p id="paragraph2" class="hiddenParagraph">Correct! Only 30% of U.S. adults are able to correctly identify all six uses of AI asked about in the survey, indicating a lack of public understanding.</p>
+
+    <button onclick="revealParagraph('paragraph3')">50%</button>
+    <p id="paragraph3" class="hiddenParagraph">Incorrect. Not quite… </p>
+  </div>
+
+  <form action="question4.html">
+    <button type="submit" class="middlebutton">Next Question</button>
+  </form>
+
+  <script>
+    function revealParagraph(paragraphId) {
+      var paragraph = document.getElementById(paragraphId);
+      paragraph.style.display = "block";
+    }
+  </script>
+
+
+</body>
+
+</html>

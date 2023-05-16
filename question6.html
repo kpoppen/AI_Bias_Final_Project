@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+  <title>Index</title>
+</head>
+<body style="background-color:beige;"></body>
+
+  <style>
+    .btn-group {
+      background-color: salmon;
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 20%;
+      position: absolute;
+      bottom: 10%;
+      right: 20%;
+      left: 20%;
+    }
+    .hiddenParagraph {
+      display: none;
+      color: black;
+    }
+
+    .middlebutton {
+      background-color: salmon;
+      color: black;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 20%;
+      border-color: darkgray;
+      position: absolute;
+      bottom: 30%;
+      right: 5%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style = "text-align: center; background-color: salmon;">Question 6</h1>
+  <p style="text-align: center;border:2px solid darksalmon; font-size: 30px">Click the correct answer! </p>
+  <p style="text-align: center; font-size: 25px">Q: Which of these answers is NOT a way to mitigate AI bias?</p>
+  
+  <div class="btn-group">
+    <button onclick="revealParagraph('paragraph1')">Ensure that collected training data is diverse, high-quality, and up-to-date.</button>
+    <p id="paragraph1" class="hiddenParagraph">Incorrect. The more diverse, high-quality, and up-to-date a set of training data is, the better! </p>
+    
+    <button onclick="revealParagraph('paragraph2')">Improve diversity and representation in the AI workforce.</button>
+    <p id="paragraph2" class="hiddenParagraph">Incorrect. Increasing diversity and representation in the workforce will mitigate AI bias as underrepresented groups are more likely to consider bias involved in human-decision making. </p>
+
+    <button onclick="revealParagraph('paragraph3')">Establish algorithms that are written by one group of similar people. </button>
+    <p id="paragraph3" class="hiddenParagraph">Correct! It is important that a diverse group of people, not a group of similar people, work collaboratively to write algorithms and label training data in order to mitigate AI bias. </p>
+  </div>
+
+  <form action="question7.html">
+    <button type="submit" class="middlebutton">Next Question</button>
+  </form>
+
+  <script>
+    function revealParagraph(paragraphId) {
+      var paragraph = document.getElementById(paragraphId);
+      paragraph.style.display = "block";
+    }
+  </script>
+
+
+</body>
+
+</html>

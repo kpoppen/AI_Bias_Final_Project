@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+  <title>Index</title>
+</head>
+<body style="background-color:beige;"></body>
+
+  <style>
+    .btn-group {
+      background-color: salmon;
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 20%;
+      position: absolute;
+      bottom: 10%;
+      right: 20%;
+      left: 20%;
+    }
+    .hiddenParagraph {
+      display: none;
+      color: black;
+    }
+
+    .middlebutton {
+      background-color: salmon;
+      color: black;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 20%;
+      border-color: darkgray;
+      position: absolute;
+      bottom: 30%;
+      right: 5%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style = "text-align: center; background-color: salmon;">Question 1</h1>
+  <p style="text-align: center;border:2px solid darksalmon; font-size: 30px">Click the correct answer! </p>
+  <p style="text-align: center; font-size: 25px">Q: What is AI?</p>
+  
+  <div class="btn-group">
+    <button onclick="revealParagraph('paragraph1')">Technology that mimics human intelligence to perform tasks and can iteratively improve themselves. </button>
+    <p id="paragraph1" class="hiddenParagraph">Correct!</p>
+    
+    <button onclick="revealParagraph('paragraph2')">Systems that learn or improve their performance based on the data they consume.</button>
+    <p id="paragraph2" class="hiddenParagraph">Incorrect. This is the definition of machine-learning. While the term ‘machine-learning’ is often used interchangeably with the term ‘AI’ and all machine learning is AI, not all AI is machine learning. </p>
+
+    <button onclick="revealParagraph('paragraph3')">A program that extracts data from images and uses models to conduct image classification.</button>
+    <p id="paragraph3" class="hiddenParagraph">Incorrect. This is an application of AI, known as image analysis.</p>
+  </div>
+
+  <form action="question2.html">
+    <button type="submit" class="middlebutton">Next Question</button>
+  </form>
+
+  <script>
+    function revealParagraph(paragraphId) {
+      var paragraph = document.getElementById(paragraphId);
+      paragraph.style.display = "block";
+    }
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+  <title>Index</title>
+</head>
+<body style="background-color:beige;"></body>
+
+  <style>
+    .btn-group {
+      background-color: salmon;
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 20%;
+      position: absolute;
+      bottom: 10%;
+      right: 20%;
+      left: 20%;
+    }
+    .hiddenParagraph {
+      display: none;
+      color: black;
+    }
+
+    .middlebutton {
+      background-color: salmon;
+      color: black;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 20%;
+      border-color: darkgray;
+      position: absolute;
+      bottom: 30%;
+      right: 5%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style = "text-align: center; background-color: salmon;">Question 8</h1>
+  <p style="text-align: center;border:2px solid darksalmon; font-size: 30px">Click the correct answer! </p>
+  <p style="text-align: center; font-size: 25px">Q: What can YOU do to help mitigate AI bias? </p>
+  
+  <div class="btn-group">
+    <button onclick="revealParagraph('paragraph1')">Stop using all AI immediately.</button>
+    <p id="paragraph1" class="hiddenParagraph">Incorrect. While you may no longer interact with AI, this will not help remove bias in AI. </p>
+    
+    <button onclick="revealParagraph('paragraph2')">Educate yourself on bias in AI to build awareness and understanding</button>
+    <p id="paragraph2" class="hiddenParagraph">Correct! For educational resources, check out <a href="https://www.raspberrypi.org/ai-ml-data-science-education-resources/">THIS LINK</a></p>
+
+    <button onclick="revealParagraph('paragraph3')">Nothing can be done to help mitigate bias in AI. </button>
+    <p id="paragraph3" class="hiddenParagraph">Incorrect. There are ways to remove bias in AI… Try again! </p>
+  </div>
+
+  <form action="sources.html">
+    <button type="submit" class="middlebutton">Next Question</button>
+  </form>
+
+  <script>
+    function revealParagraph(paragraphId) {
+      var paragraph = document.getElementById(paragraphId);
+      paragraph.style.display = "block";
+    }
+  </script>
+
+
+</body>
+
+</html>
